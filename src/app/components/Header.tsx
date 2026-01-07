@@ -1,6 +1,8 @@
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import logoEscudo from "@/assets/logo-escudo.png";
+import logoRectangular from "@/assets/logo-rectangular.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,38 +26,41 @@ export function Header() {
             onClick={() => scrollToSection('top')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Shield className="w-6 h-6 text-white" />
-            </div>
-            <div className="text-left">
-              <div className="text-lg leading-none text-slate-900">SecuriCañete</div>
-              <div className="text-xs text-slate-500">Seguridad Privada</div>
-            </div>
+            <img
+              src={logoEscudo}
+              alt="Company of Force Real SAC"
+              className="h-10 w-10 object-contain sm:hidden"
+            />
+            <img
+              src={logoRectangular}
+              alt="Company of Force Real SAC"
+              className="hidden h-10 w-auto object-contain sm:block"
+            />
           </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             <button 
               onClick={() => scrollToSection('top')}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-600 hover:text-amber-600 transition-colors"
             >
               Inicio
             </button>
             <button 
               onClick={() => scrollToSection('servicios')}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-600 hover:text-amber-600 transition-colors"
             >
               Servicios
             </button>
             <button 
               onClick={() => scrollToSection('contacto')}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-600 hover:text-amber-600 transition-colors"
             >
               Contacto
             </button>
             <Button 
               onClick={() => scrollToSection('contacto')}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-amber-500 hover:bg-amber-600 text-neutral-950"
             >
               Solicitar Cotización
             </Button>
@@ -64,7 +69,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-blue-600"
+            className="md:hidden p-2 text-slate-600 hover:text-amber-600"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -76,25 +81,25 @@ export function Header() {
             <div className="flex flex-col gap-3">
               <button 
                 onClick={() => scrollToSection('top')}
-                className="text-left py-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="text-left py-2 text-slate-600 hover:text-amber-600 transition-colors"
               >
                 Inicio
               </button>
               <button 
                 onClick={() => scrollToSection('servicios')}
-                className="text-left py-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="text-left py-2 text-slate-600 hover:text-amber-600 transition-colors"
               >
                 Servicios
               </button>
               <button 
                 onClick={() => scrollToSection('contacto')}
-                className="text-left py-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="text-left py-2 text-slate-600 hover:text-amber-600 transition-colors"
               >
                 Contacto
               </button>
               <Button 
                 onClick={() => scrollToSection('contacto')}
-                className="bg-blue-600 hover:bg-blue-700 text-white w-full mt-2"
+                className="bg-amber-500 hover:bg-amber-600 text-neutral-950 w-full mt-2"
               >
                 Solicitar Cotización
               </Button>
@@ -105,3 +110,4 @@ export function Header() {
     </header>
   );
 }
+

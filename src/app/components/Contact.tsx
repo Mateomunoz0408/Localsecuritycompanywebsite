@@ -39,7 +39,7 @@ export function Contact() {
     <section id="contacto" className="py-20 bg-slate-900 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-blue-400 uppercase tracking-wide">Contacto</span>
+          <span className="text-amber-400 uppercase tracking-wide">Contacto</span>
           <h2 className="text-4xl mt-2 mb-4">
             Estamos Aquí Para Ayudarte
           </h2>
@@ -56,7 +56,7 @@ export function Contact() {
               const content = info.link ? (
                 <a 
                   href={info.link} 
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                  className="text-amber-400 hover:text-amber-300 transition-colors"
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 >
@@ -69,8 +69,8 @@ export function Contact() {
               return (
                 <Card key={index} className="bg-slate-800 border-slate-700 hover:bg-slate-750 transition-colors">
                   <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-6 h-6 text-amber-400" />
                     </div>
                     <h3 className="text-sm uppercase tracking-wide text-slate-400 mb-2">
                       {info.title}
@@ -126,3 +126,4 @@ export function Contact() {
     </section>
   );
 }
+

@@ -1,6 +1,7 @@
 import { Shield, Users, Camera, Clock, Building2, Home } from "lucide-react";
 import { Card, CardHeader, CardContent } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import logoEscudo from "@/assets/logo-escudo.png";
 
 export function Services() {
   const services = [
@@ -46,7 +47,7 @@ export function Services() {
     <section id="servicios" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-blue-600 uppercase tracking-wide">Nuestros Servicios</span>
+          <span className="text-amber-600 uppercase tracking-wide">Nuestros Servicios</span>
           <h2 className="text-4xl mt-2 mb-4 text-slate-900">
             Soluciones de Seguridad Integrales
           </h2>
@@ -62,8 +63,8 @@ export function Services() {
             return (
               <Card key={index} className="hover:shadow-xl transition-shadow border-slate-200 group">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-                    <Icon className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+                  <div className="w-14 h-14 bg-amber-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-amber-500 transition-colors">
+                    <Icon className="w-7 h-7 text-amber-600 group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-xl text-slate-900">{service.title}</h3>
                 </CardHeader>
@@ -72,7 +73,7 @@ export function Services() {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
                         {feature}
                       </li>
                     ))}
@@ -96,28 +97,44 @@ export function Services() {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <img
+                    src={logoEscudo}
+                    alt="Company of Force Real SAC"
+                    className="w-5 h-5 object-contain mt-0.5 flex-shrink-0"
+                  />
                   <div>
                     <strong className="text-slate-900">Personal Certificado:</strong>
                     <span className="text-slate-600"> Todo nuestro equipo cuenta con capacitación profesional y certificaciones vigentes.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <img
+                    src={logoEscudo}
+                    alt="Company of Force Real SAC"
+                    className="w-5 h-5 object-contain mt-0.5 flex-shrink-0"
+                  />
                   <div>
                     <strong className="text-slate-900">Empresa Local:</strong>
                     <span className="text-slate-600"> Conocemos Cañete y sus particularidades, lo que nos permite brindar un servicio más efectivo.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <img
+                    src={logoEscudo}
+                    alt="Company of Force Real SAC"
+                    className="w-5 h-5 object-contain mt-0.5 flex-shrink-0"
+                  />
                   <div>
                     <strong className="text-slate-900">Respuesta Rápida:</strong>
                     <span className="text-slate-600"> Nuestra presencia local garantiza tiempos de respuesta inmediatos ante cualquier emergencia.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <img
+                    src={logoEscudo}
+                    alt="Company of Force Real SAC"
+                    className="w-5 h-5 object-contain mt-0.5 flex-shrink-0"
+                  />
                   <div>
                     <strong className="text-slate-900">Tecnología Moderna:</strong>
                     <span className="text-slate-600"> Utilizamos equipos y sistemas de última generación para garantizar tu seguridad.</span>
@@ -138,3 +155,5 @@ export function Services() {
     </section>
   );
 }
+
+

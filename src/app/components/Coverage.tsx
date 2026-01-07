@@ -18,8 +18,8 @@ export function Coverage() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <MapPin className="w-8 h-8 text-blue-600" />
-            <span className="text-blue-600 uppercase tracking-wide">Cobertura Local</span>
+            <MapPin className="w-8 h-8 text-amber-600" />
+            <span className="text-amber-600 uppercase tracking-wide">Cobertura Local</span>
           </div>
           <h2 className="text-4xl mb-4 text-slate-900">
             Presencia en Todo Cañete
@@ -35,7 +35,7 @@ export function Coverage() {
             <Card key={index} className="hover:shadow-lg transition-shadow border-slate-200">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0" />
                   <span className="text-slate-700">{zone}</span>
                 </div>
               </CardContent>
@@ -44,7 +44,7 @@ export function Coverage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Card className="max-w-3xl mx-auto bg-blue-50 border-blue-200">
+          <Card className="max-w-3xl mx-auto bg-amber-50 border-amber-200">
             <CardContent className="p-8">
               <h3 className="text-xl mb-3 text-slate-900">
                 ¿No encuentras tu zona?
@@ -55,7 +55,7 @@ export function Coverage() {
               </p>
               <a 
                 href="#contacto" 
-                className="text-blue-600 hover:text-blue-700 underline"
+                className="text-amber-600 hover:text-amber-700 underline"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
@@ -70,3 +70,4 @@ export function Coverage() {
     </section>
   );
 }
+
