@@ -1,8 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
-import logoEscudo from "@/assets/logo-escudo.png";
-import logoRectangular from "@/assets/logo-rectangular.png";
+import logoEscudo from "../../assets/logo-escudo.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,13 +28,14 @@ export function Header() {
             <img
               src={logoEscudo}
               alt="Company of Force Real SAC"
-              className="h-10 w-10 object-contain sm:hidden"
+              className="h-10 w-10 object-contain"
             />
-            <img
-              src={logoRectangular}
-              alt="Company of Force Real SAC"
-              className="hidden h-10 w-auto object-contain sm:block"
-            />
+            <div className="text-left leading-tight">
+              <div className="text-sm font-semibold text-slate-900 sm:text-base">
+                Company of Force Real SAC
+              </div>
+              <div className="text-xs text-slate-600">Seguridad Privada 24/7</div>
+            </div>
           </button>
 
           {/* Desktop Navigation */}

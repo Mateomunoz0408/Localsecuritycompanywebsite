@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import logoEscudo from "@/assets/logo-escudo.png";
+import logoRectangular from "../../assets/logo-rectangular.png";
 
 export function Hero() {
   return (
@@ -16,13 +16,13 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 pt-8 pb-20">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-4 mb-6">
             <img
-              src={logoEscudo}
+              src={logoRectangular}
               alt="Company of Force Real SAC"
-              className="w-12 h-12 object-contain"
+              className="h-16 w-auto object-contain sm:h-20 md:h-24"
             />
             <span className="text-amber-300 text-lg">Protección 24/7</span>
           </div>
@@ -47,7 +47,7 @@ export function Hero() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-amber-200 text-amber-100 hover:bg-amber-100/10 px-8 py-6 text-lg"
+              className="border-2 border-amber-400 text-amber-300 hover:bg-amber-400/15 px-8 py-6 text-lg"
               onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Servicios

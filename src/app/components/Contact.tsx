@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, Clock, Shield, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -6,18 +6,18 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Teléfono",
+      title: "Telefono",
       content: "+51 923 456 789",
       link: "tel:+51923456789"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@seguridadcanete.pe",
-      link: "mailto:info@seguridadcanete.pe"
+      content: "secretaria.companyreal@gmail.com ",
+      link: "mailto:secretaria.companyreal@gmail.com"
     },
     {
-      icon: MapPin,
+      icon: Shield,
       title: "Dirección",
       content: "Av. Bolognesi 345, Cañete Centro",
       link: "https://maps.google.com"
@@ -32,7 +32,7 @@ export function Contact() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hola, quisiera solicitar información sobre sus servicios de seguridad.");
-    window.open(`https://wa.me/51923456789?text=${message}`, '_blank');
+    window.open(`https://wa.me/51981297162?text=${message}`, '_blank');
   };
 
   return (
@@ -56,14 +56,14 @@ export function Contact() {
               const content = info.link ? (
                 <a 
                   href={info.link} 
-                  className="text-amber-400 hover:text-amber-300 transition-colors"
+                  className="text-amber-400 hover:text-amber-300 transition-colors break-words"
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 >
                   {info.content}
                 </a>
               ) : (
-                <span className="text-slate-300">{info.content}</span>
+                <span className="text-slate-300 break-words">{info.content}</span>
               );
 
               return (
@@ -75,7 +75,7 @@ export function Contact() {
                     <h3 className="text-sm uppercase tracking-wide text-slate-400 mb-2">
                       {info.title}
                     </h3>
-                    <div className="text-sm">
+                    <div className="text-sm break-words">
                       {content}
                     </div>
                   </CardContent>
@@ -113,8 +113,8 @@ export function Contact() {
               <CardContent className="p-6">
                 <p className="text-red-200">
                   <strong className="text-red-100">¿Emergencia?</strong> Llámanos inmediatamente al{' '}
-                  <a href="tel:+51923456789" className="text-red-300 hover:text-red-200 underline">
-                    +51 923 456 789
+                  <a href="tel:+51981297162" className="text-red-300 hover:text-red-200 underline">
+                    +51 981 297 162
                   </a>
                   {' '}o contacta a las autoridades locales.
                 </p>
@@ -126,4 +126,9 @@ export function Contact() {
     </section>
   );
 }
+
+
+
+
+
 

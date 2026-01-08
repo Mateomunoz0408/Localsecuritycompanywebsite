@@ -1,5 +1,4 @@
-import { Facebook, Instagram, Mail, Phone } from "lucide-react";
-import logoEscudo from "@/assets/logo-escudo.png";
+import { Facebook, Instagram, Mail, Phone, Shield } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,23 +8,18 @@ export function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img
-                src={logoEscudo}
-                alt="Company of Force Real SAC"
-                className="w-10 h-10 object-contain"
-              />
               <div>
-                <div className="text-lg text-white">SecuriCañete</div>
-                <div className="text-xs text-slate-400">Seguridad Privada</div>
+                <div className="text-lg text-white">Company of Force Real SAC</div>
+                <div className="text-xs text-slate-400">Seguridad Privada 24/7</div>
               </div>
             </div>
             <p className="text-sm text-slate-400 mb-4 max-w-md">
-              Empresa local de seguridad privada comprometida con la protección de hogares y negocios 
-              en toda la provincia de Cañete. Servicio profesional y confiable desde 2014.
+              Empresa local de seguridad privada comprometida con la proteccion de hogares y negocios 
+              en toda la provincia de Canete. Servicio profesional y confiable desde 2014.
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/share/v/17ifXzXu9J/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-500 transition-colors"
@@ -33,7 +27,7 @@ export function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.facebook.com/reel/2178896909283320?sfnsn=wa&mibextid=6AJuK9" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-500 transition-colors"
@@ -45,7 +39,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white mb-4">Enlaces Rápidos</h3>
+            <h3 className="text-white mb-4">Enlaces Rapidos</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <button 
@@ -85,22 +79,21 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-400" />
-                <a href="tel:+51923456789" className="hover:text-amber-400 transition-colors">
-                  +51 923 456 789
+                <a href="tel:+51981297162" className="hover:text-amber-400 transition-colors">
+                  +51 981 297 162
+                </a>
+                <a href="tel:+51989995435" className="hover:text-amber-400 transition-colors">
+                  / +51 989 995 435
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-400" />
-                <a href="mailto:info@seguridadcanete.pe" className="hover:text-amber-400 transition-colors">
-                  info@seguridadcanete.pe
+                <a href="mailto:goperaciones.companyreal@gmail.com" className="hover:text-amber-400 transition-colors">
+                  goperaciones.companyreal@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <img
-                  src={logoEscudo}
-                  alt="Company of Force Real SAC"
-                  className="w-4 h-4 mt-0.5 flex-shrink-0 object-contain"
-                />
+                <Shield className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-400" />
                 <span>Av. Bolognesi 345<br />Cañete Centro, Perú</span>
               </li>
             </ul>
@@ -109,13 +102,13 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>&copy; 2026 SecuriCañete. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Company of Force Real SAC. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-amber-400 transition-colors">
-              Política de Privacidad
+              Politica de Privacidad
             </a>
             <a href="#" className="hover:text-amber-400 transition-colors">
-              Términos de Servicio
+              Terminos de Servicio
             </a>
           </div>
         </div>
@@ -123,4 +116,3 @@ export function Footer() {
     </footer>
   );
 }
-
