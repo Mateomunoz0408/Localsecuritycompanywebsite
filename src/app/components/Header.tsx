@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
-import logoEscudo from "../../assets/logo-escudo.png";
+import logoEscudo from "@/assets/logo-escudo.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
